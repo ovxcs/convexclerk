@@ -42,7 +42,7 @@ import { useRef, useState } from "react";
 
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 
-import { Authenticated, Unauthenticated, AuthLoading, useQuery, useMutation } from "convex/react";
+import { Authenticated, Unauthenticated, AuthLoading, useQuery, useMutation } from "convex/react"; //useQuery
 
 import { api } from "../convex/_generated/api";
 
@@ -68,8 +68,8 @@ function App() {
 }
 
 function Content() {
-    //const messages = useQuery(api.messages.getForCurrentUser);
-    //return <div>Authenticated content: {messages?.length}</div>;
+    const messages = useQuery(api.messages.getForCurrentUser);
+    return <div>Authenticated content: {messages?.length}</div>;
     
 }
 
