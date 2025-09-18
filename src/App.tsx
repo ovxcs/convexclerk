@@ -36,7 +36,9 @@ function App() {
 export default App
 */
 
-import { FormEvent, useRef, useState } from "react";
+import type { FormEvent } from 'react';
+
+import { useRef, useState } from "react";
 
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 
